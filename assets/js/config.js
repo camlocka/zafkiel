@@ -1,7 +1,14 @@
 /**
  * Customize the site here. Media can use a repository file (`local`) or a full
  * hosted/CDN URL (`remote`). When both are present, `remote` wins.
+ * 
+python -m http.server 8080
+ `http://localhost:8080`.
+
  */
+
+
+
 export const SITE_CONFIG = {
   identity: {
     name: "ZAFKIEL",

@@ -39,8 +39,7 @@ function applyTheme() {
 function applyIdentity() {
   const { identity } = SITE_CONFIG;
   document.title = `${identity.name}${identity.suffix} // Personal Profile`;
-  setText("#brand-name", `${identity.name}.`);
-  setText("#brand-caption", identity.caption);
+
   setText("#card-subject", identity.name);
   setText("#card-zone", identity.timezone);
   setText("#card-code", identity.code);
