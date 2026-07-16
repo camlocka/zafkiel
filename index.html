@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080403" />
+    <meta name="description" content="A cinematic personal bio and link hub with an integrated music player." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ZAFKIEL // Personal Profile" />
+    <meta property="og:description" content="Profile, projects, links, and an after-hours soundtrack." />
+    <title>ZAFKIEL // Personal Profile</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script type="module" src="assets/js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#profile">Skip to profile</a>
+
+    <div class="boot-screen" id="boot-screen" aria-label="Site introduction">
+      <button class="boot-trigger" id="boot-trigger" type="button">
+        <span class="boot-kicker">PRIVATE SIGNAL // ACCESS REQUEST</span>
+        <span class="boot-title">ENTER PROFILE</span>
+        <span class="boot-hint">click anywhere or press enter</span>
+      </button>
+    </div>
+
+    <div class="site" id="site" aria-hidden="true" inert>
+      <div class="ambient" aria-hidden="true">
+        <div class="star-field" id="star-field"></div>
+        <div class="signal-glow signal-glow--one"></div>
+        <div class="signal-glow signal-glow--two"></div>
+        <div class="scanlines"></div>
+      </div>
+
+      <header class="topbar">
+        <a class="wordmark" href="#profile" aria-label="Home">
+          <span class="wordmark-mark">ZK</span>
+          <span>
+            <strong id="brand-name">ZAFKIEL.</strong>
+            <small id="brand-caption">PERSONAL SIGNAL ARCHIVE</small>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="nav-link is-active" href="#profile"><span>01:</span> PROFILE</a>
+          <a class="nav-link" href="#links"><span>02:</span> LINKS</a>
+          <a class="nav-link" href="#sound"><span>03:</span> SOUND</a>
+        </nav>
+        <div class="system-state" aria-label="System status">
+          <span class="state-dot"></span><span>ONLINE</span>
+        </div>
+      </header>
+
+      <main class="profile-layout" id="profile">
+        <section class="visual-column" aria-label="Profile visual">
+          <div class="visual-index" aria-hidden="true">01</div>
+          <article class="portrait-card" id="portrait-card">
+            <div class="card-orbit card-orbit--a" aria-hidden="true"></div>
+            <div class="card-orbit card-orbit--b" aria-hidden="true"></div>
+            <div class="card-grid" aria-hidden="true"></div>
+            <div class="pilot-label"><span>SUBJECT:</span><strong id="card-subject">ZAFKIEL</strong></div>
+            <div class="sync-readout"><strong>98.7%</strong><span>SIGNAL SYNC</span></div>
+            <div class="avatar-frame">
+              <img id="profile-image" alt="" hidden />
+              <span class="avatar-fallback" id="avatar-fallback" aria-hidden="true">ZK</span>
+            </div>
+            <div class="card-copy">
+              <span>STATUS: <strong id="card-status">ACTIVE</strong></span>
+              <span>ZONE: <strong id="card-zone">UTC−06</strong></span>
+            </div>
+            <div class="warning-tape" aria-hidden="true">
+              <span>CAUTION /// OPEN CHANNEL /// CAUTION /// OPEN CHANNEL /// CAUTION /// OPEN CHANNEL ///</span>
+            </div>
+            <div class="card-code"><small>CODE</small><strong id="card-code">009</strong></div>
+          </article>
+        </section>
+
+        <section class="bio-column" aria-labelledby="hero-name">
+          <div class="orbit-system" aria-hidden="true"><span></span><span></span><span></span></div>
+          <p class="clearance" id="clearance">PRIVATE CHANNEL // CLEARANCE: GRANTED</p>
+          <div class="hero-copy">
+            <p class="eyebrow">WELCOME TO MY CORNER OF THE INTERNET</p>
+            <h1 id="hero-name"><span id="name-main">ZAFKIEL</span><em id="name-suffix">.SYS</em></h1>
+            <div class="hero-rule" aria-hidden="true"></div>
+            <dl class="identity-list">
+              <div><dt>ID</dt><dd id="identity-id">ZK-009</dd></div>
+              <div><dt>ROLE</dt><dd id="identity-role">creative developer</dd></div>
+              <div><dt>STATUS</dt><dd id="identity-status">building after midnight</dd></div>
+            </dl>
+            <p class="bio" id="identity-bio">I design and build expressive digital experiences with a focus on clean code, sharp interfaces, and a little controlled chaos.</p>
+          </div>
+
+          <section class="links-section" id="links" aria-labelledby="links-heading">
+            <div class="section-heading"><span id="links-heading">INITIATE LINK</span><small>SELECT A CHANNEL</small></div>
+            <div class="link-grid" id="link-grid"></div>
+          </section>
+        </section>
+      </main>
+
+      <section class="sound-dock" id="sound" aria-label="Music player">
+        <div class="album-art" id="album-art" aria-hidden="true"><span>♪</span></div>
+        <div class="track-meta">
+          <span class="track-state" id="track-state">NO TRACK LOADED</span>
+          <strong id="track-title">ADD YOUR MP3</strong>
+          <small id="track-artist">EDIT assets/js/config.js</small>
+        </div>
+        <button class="player-button" id="play-button" type="button" aria-label="Play" disabled><span class="play-icon" aria-hidden="true"></span></button>
+        <div class="timeline">
+          <input id="seek" class="range" type="range" min="0" max="100" step="0.1" value="0" aria-label="Track position" disabled />
+          <div class="time-row"><span id="current-time">00:00</span><span id="duration">00:00</span></div>
+        </div>
+        <button class="mute-button" id="mute-button" type="button" aria-label="Mute" disabled>VOL</button>
+        <input id="volume" class="range range--volume" type="range" min="0" max="1" step="0.01" value="0.72" aria-label="Volume" disabled />
+        <audio id="audio" preload="metadata"></audio>
+      </section>
+
+      <footer class="footer">
+        <span>CHANNEL: SECURE</span>
+        <span>© <span id="year"></span> <span id="footer-name">ZAFKIEL</span></span>
+        <span class="footer-signal"><i></i> SIGNAL STABLE</span>
+      </footer>
+      <p class="sr-only" id="live-region" aria-live="polite"></p>
+    </div>
+  </body>
+</html>

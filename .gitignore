@@ -1,0 +1,16 @@
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local secrets and scratch output
+.env
+.env.*
+tmp/
+dist/
+node_modules/
+
+# Remove this line if you want GitHub Pages to serve a committed MP3.
+assets/audio/*.mp3
+
